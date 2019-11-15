@@ -1,16 +1,22 @@
 class Birthday
-  def initialize
+  def initialize(name,day,month)
+    @name = name
+    @day = day
+    @month = month
+  end
 
+  def date
+    return "#{@name}'s birthday is day #{@day} of #{@month}"
   end
 end
 
 class List
-attr_reader :dates
+attr_reader :people
   def initialize
-    @dates = []
+    @people = []
   end
 
   def store(bday)
-    @dates << bday
+    @people << bday
   end
 end
